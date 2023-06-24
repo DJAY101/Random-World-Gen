@@ -23,6 +23,7 @@ namespace Utility
         // Update is called once per frame
         void Update()
         {
+            //if the timer is running then accumulate over time
             if (timerRunning) { timerValue += Time.deltaTime; }
         }
 
@@ -31,17 +32,18 @@ namespace Utility
         {
             return timerValue > seconds;
         }
-
+        // start the timer
         public void StartTimer()
         {
             timerRunning = true;
         }
-
+        // stop the timer
         public void StopTimer()
         {
             timerRunning = false;
         }
 
+        // reset the timer
         public void ResetTimer()
         {
             timerValue = 0f;

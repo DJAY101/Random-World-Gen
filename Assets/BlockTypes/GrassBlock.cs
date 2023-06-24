@@ -7,6 +7,7 @@ public class GrassBlock : Block
 
     public GrassBlock(BlockManager manager) : base(manager)
     {
+        // block setup
         blockName = "Grass";
         blockType = BlockType.Grass;
         initialiseBlockRules();
@@ -18,16 +19,21 @@ public class GrassBlock : Block
         if (blockRules == null)
         {
             blockRules = new Rules();
+         
+            // blocks allowed below this block
             blockRules.downBlocks = new List<BlockType> {
                 BlockType.Dirt,
                 BlockType.Grass
             };
 
+            // blocks allowed above this block
             blockRules.upBlocks = new List<BlockType> {
                 BlockType.Air,
                 BlockType.Empty
                 
             };
+
+            // blocks allowed left of this block
             blockRules.leftBlocks = new List<BlockType>
             {
                 BlockType.Empty,
@@ -39,8 +45,10 @@ public class GrassBlock : Block
             blockRules.frontBlocks = blockRules.leftBlocks;
             blockRules.backBlocks = blockRules.leftBlocks;
 
+            // set the max height
             blockRules.maxHeight = 6;
 
+            // apply the rules
             ruleSet.Add(BlockType.Grass, blockRules);
 
         }

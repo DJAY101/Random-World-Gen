@@ -18,13 +18,13 @@ public class BlockManager : MonoBehaviour
         
     }
 
-    public GameObject findBlockObject(string blockName) {
+    //public GameObject findBlockObject(string blockName) {
 
-        return BlockTypes.Find(block => block.GetComponent<Block>().getBlockName() == blockName);
+    //    return BlockTypes.Find(block => block.GetComponent<Block>().getBlockName() == blockName);
         
-    }
+    //}
 
-
+    //spawn a the block
     public GameObject spawnBlock(Block block) {
 
         return Instantiate(BlockTypes.Find(blockType => blockType.name == block.getBlockName()), block.blockCoordinates, transform.rotation);

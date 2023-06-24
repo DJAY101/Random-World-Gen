@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+//this was testing code and is not used within the world generation, it was used to learn unity and spawn random blocks
+
 public class LoadWorld : MonoBehaviour
 {
 
