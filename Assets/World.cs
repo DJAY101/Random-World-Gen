@@ -206,15 +206,42 @@ public class World : MonoBehaviour
 
 
 
+    private void purgeWorld()
+    {
 
+        for (int x = 0; x < worldSize.x; x++)
+        {
+            for (int y = 0; y < worldSize.y; y++)
+            {
+                for (int z = 0; z < worldSize.z; z++)
+                {
+                    if(worldData[x][y][z] != null) worldData[x][y][z].deleteGeometry();
+                }
+            }
+        }
+        worldData.Clear();
+
+    }
 
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("r"))
+        {
+            purgeWorld();
+
+            //First fill the world with unknown blocks
+            loadWorldWithUnknown();
+
+            //generate the world
+            iterateGenerateWorld();
+        }
     }
+
+
+
     //get the block at a given x y z coordinate
     public Block getBlockAt(int x, int y, int z)
     {

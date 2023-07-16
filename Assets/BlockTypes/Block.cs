@@ -43,8 +43,8 @@ public abstract class Block
     //current block coordinate in the world
     public Vector3 blockCoordinates = Vector3.zero;
 
-    // The spaned block within the world
-    protected GameObject gameBlock;
+    // The spawned block within the world
+    public GameObject gameBlock;
     // The block manager to spawn the block into the world
     protected BlockManager blockManager;
     
@@ -84,5 +84,12 @@ public abstract class Block
     {
         gameBlock = blockManager.spawnBlock(this);
     }
+
+    public virtual void deleteGeometry()
+    {
+        if (!blockManager) return;
+        blockManager.deleteBlock(this);       
+    }
+
 
 }

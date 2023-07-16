@@ -155,7 +155,7 @@ MonoBehaviour:
   mainCamera: {fileID: 963194227}
   zoomSensitivity: 1
   cameraSensitivity: 0.01
-  orbitOrigin: {x: 8, y: 0, z: 8}
+  orbitOrigin: {x: 7.5, y: 3, z: 7.5}
   startOrbitAngle: 3.925
   startPitchAngle: 0.785
 --- !u!4 &444045253
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7075bd51792777f488d202d3f2d476c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldSize: {x: 15, y: 15, z: 15}
+  worldSize: {x: 16, y: 16, z: 16}
   blockManager: {fileID: 928202337}
 --- !u!114 &928202337
 MonoBehaviour:

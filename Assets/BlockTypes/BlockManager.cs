@@ -31,4 +31,14 @@ public class BlockManager : MonoBehaviour
 
     }
 
+    public void deleteBlock(Block block)
+    {
+        if (block.gameBlock)
+        {
+
+            Destroy(block.gameBlock);
+
+        }
+    }
+
 }

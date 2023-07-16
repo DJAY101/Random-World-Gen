@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
     //a vector to store the normalised vector pointing from the center of grid to the camera
     Vector3 cameraDirectionVector = Vector3.zero;
     // the magnitude of the direction vector and how close it is to the center grid
-    float cameraDistanceFromOrigin = 3.0f;
+    float cameraDistanceFromOrigin = 6.0f;
 
     //vector for storing delta mouse position
     Vector3 deltaMousePos = Vector3.zero;
@@ -52,7 +52,7 @@ public class CameraController : MonoBehaviour
         {
             orbitAngle -= deltaMousePos.x * cameraSensitivity;
             pitchAngle -= deltaMousePos.y * cameraSensitivity;
-            pitchAngle = Mathf.Clamp(pitchAngle, 0, Mathf.PI / 2.1f); // clamp the pitch angle to 0 degrees to roughly 90 degrees
+            pitchAngle = Mathf.Clamp(pitchAngle, 0, Mathf.PI / 2.01f); // clamp the pitch angle to 0 degrees to roughly 90 degrees
         }
 
 
